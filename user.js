@@ -24,6 +24,7 @@ function addUser(user) {
   let $user = $('.user')
   let $email = `<h2>${user.email}</h2>`
   $user.append($email);
+  return user.id;
 }
 
 function getSticker(id) {
