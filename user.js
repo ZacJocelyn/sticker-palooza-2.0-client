@@ -31,11 +31,12 @@ function getSticker(id) {
   return $.get(`http://localhost:3000/user/${id}/sticker`)
 }
 
-function addSticker(user) {
+function addSticker(sticker) {
   let $sticker = $('.sticker')
 
-for (var i = 0; i < sticker.length; i++) {
-  let $stickers = `<img src="${sticker[i].image_url}"`;
-  $sticker.append($stickers);
+  for (var i = 0; i < sticker.length; i++) {
+    let $stickers = `<img src="${sticker[i].image_url}"`;
+    $sticker.append($stickers);
   }
+  return sticker
 }
