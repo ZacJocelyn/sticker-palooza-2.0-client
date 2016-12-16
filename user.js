@@ -4,6 +4,10 @@ $(document).ready( () => {
   .then(addUser)
   .then(getSticker)
   .then(addSticker)
+
+  $('#submit').click((event) => {
+
+  })
 })
 
 function parseQuery(query){
@@ -40,4 +44,10 @@ function addSticker(sticker) {
     $sticker.append($stickers);
   }
   return sticker
+}
+
+function whenClickHappens(user) {
+  $.post(`/users/${user_id}/sticker`, function(sticker){
+    return sticker
+  })
 }
