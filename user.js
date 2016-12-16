@@ -35,7 +35,8 @@ function addSticker(sticker) {
   let $sticker = $('.sticker')
 
   for (var i = 0; i < sticker.length; i++) {
-    let $stickers = `<img src="${sticker[i].image_url}"`;
+    let $stickers = `<img src="${sticker[i].image_url}"/>
+    <h5>${sticker[i].name}</h5>`;
     $sticker.append($stickers);
   }
   return sticker
